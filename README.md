@@ -189,6 +189,7 @@ The following line of code opens it in MAGIC,
 
 ![Image Description](Media/Day%20-%202/Image%20(11).png)    
 ---
+---
 ### 2.3 Library binding and Placement
 ---
 
