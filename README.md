@@ -2,7 +2,7 @@
 ---
 ## Day-1
 ---
-### 1.1.1   Introduction to package, chip, pads, core, die and IP's
+### 1.1   Introduction to package, chip, pads, core, die and IP's
 ---
 - **Introduction**
 
@@ -30,7 +30,7 @@ The small, thin piece of silicon inside the chip that contains the actual electr
 - **IP (Intellectual Property):**
 Reusable design blocks or pre-designed functional units that can be integrated into a chip. Examples include designs for processors, memory controllers, or USB interfaces. Companies can license these IPs instead of designing them from scratch.
 ---
-### 1.1.2 Introduction to RISC-V
+### 1.2 Introduction to RISC-V
 ---
 To execute some C code on a hardware layout, the compiler first translates the high-level C code into a RISC-V assembly language program. This assembly code is a low-level representation of the program, which is then further converted into machine language—a binary format consisting of 1s and 0s—that can be directly executed by the hardware.
 
@@ -42,7 +42,7 @@ This process bridges the gap between software code and physical hardware impleme
 ![Image Description](Media/DAY%20-%201/1.3/Image%20(1).png)
 ![Image Description](Media/DAY%20-%201/1.3/Image%20(2).png)
 ---
-### 1.1.3 
+### 1.3 
 
 
 
