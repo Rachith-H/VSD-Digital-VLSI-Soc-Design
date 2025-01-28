@@ -110,7 +110,9 @@ Follow the code in openlane directory to start openlane in interactive mode and 
 `prep -design picorv32a`  
 
 ![Image Description](Media/DAY%20-%201/4/Image4.png)  
----
+
+Next the synthesis is performed by the following code,  
+`run_synthesis`  
 
 
 
