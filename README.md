@@ -118,9 +118,16 @@ Next the synthesis is performed by the following code,
 ![Image Description](Media/DAY%20-%201/4/Image%20(6).png)  
 The Flipflop ratio is determined as follows,    
 
-Flipflop ratio = (number of flipflop) / (total number of flipflop)
-Flipflop ratio = 1613/14876 = 0.10843  or  10.843%  
-![Image Description](Media/DAY%20-%201/4/Image%20(7).png)  
+Flipflop ratio = (number of flipflop) / (total number of flipflop)  
+
+Flipflop ratio = 1613/14876 = **0.10843**  or  **10.843%**    
+
+![Image Description](Media/DAY%20-%201/4/Image(7).png)    
+---
+---
+## Day - 2
+---
+
 
 
 
