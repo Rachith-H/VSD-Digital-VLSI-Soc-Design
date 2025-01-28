@@ -15,6 +15,10 @@ The physical casing that holds the silicon chip (die) and provides connections t
 The complete electronic component that includes the silicon die, packaging, and connections. It is what we use in circuits, such as microcontrollers or processors.
 
 ![Image Description](Media/DAY%20-%201/1.1/Image%20(1).png)
+- **Pad:**
+A small metallic area on the die used to connect the internal circuits to the outside world through wires or bumps.
+
+![Image Description](Media/DAY%20-%201/1.1/Image%20(3).png)
 - **Core:**
 A core is the fundamental processing unit within a chip that consists of the main hardware and executes instructions and performs computations.
 
@@ -22,11 +26,9 @@ A core is the fundamental processing unit within a chip that consists of the mai
 - **Die:**
 The small, thin piece of silicon inside the chip that contains the actual electronic circuits and components. It is where the transistors and other components are fabricated.
 
-![Image Description](Media/DAY%20-%201/1.1/Image%20(3).png)
+![Image Description](Media/DAY%20-%201/1.1/Image%20(6).png)
 - **IP (Intellectual Property):**
 Reusable design blocks or pre-designed functional units that can be integrated into a chip. Examples include designs for processors, memory controllers, or USB interfaces. Companies can license these IPs instead of designing them from scratch.
-
-![Image Description](Media/DAY%20-%201/1.1/Image%20(6).png)
 ---
 ### 1.1.2 Introduction to RISC-V
 ---
