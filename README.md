@@ -112,7 +112,16 @@ Follow the code in openlane directory to start openlane in interactive mode and 
 ![Image Description](Media/DAY%20-%201/4/Image4.png)  
 
 Next the synthesis is performed by the following code,  
-`run_synthesis`  
+`run_synthesis`      
+
+![Image Description](Media/DAY%20-%201/4/Image%20(5).png)    
+![Image Description](Media/DAY%20-%201/4/Image%20(6).png)  
+The Flipflop ratio is determined as follows,    
+
+Flipflop ratio = (number of flipflop) / (total number of flipflop)
+Flipflop ratio = 1613/14876 = 0.10843  or  10.843%  
+![Image Description](Media/DAY%20-%201/4/Image%20(7).png)  
+
 
 
 
