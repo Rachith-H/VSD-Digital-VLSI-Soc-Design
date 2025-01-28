@@ -136,14 +136,34 @@ Flipflop ratio = 1613/14876 = **0.10843**  or  **10.843%**
 ---
 ### 2.1 Chip Floor planning considerations
 ---  
-**Floorplanning** in VLSI design refers to the process of arranging the functional blocks or modules on a chip. The goal is to optimize the chip’s layout by minimizing area, power consumption, and wirelength while ensuring good performance and manufacturability.  
-![Image Description](Media/DAY%20-%202/Image%20(1).png)    
-Utilization Factor (or Utilization) is a metric that measures the efficiency of the chip area usage. It is calculated as the ratio of the area occupied by the functional modules (core area) to the total available chip area.
+**Floorplanning** in VLSI design refers to the process of arranging the functional blocks or modules on a chip. The goal is to optimize the chip’s layout by minimizing area, power consumption, and wirelength while ensuring good performance and manufacturability.      
 
+![Image Description](Media/Day%20-%202/Image%20(1).png)        
 
+Utilization Factor (or Utilization) is a metric that measures the efficiency of the chip area usage. It is calculated as the ratio of the area occupied by the functional modules (core area) to the total available chip area.     
 
+![Image Description](Media/Day%20-%202/Image%20(2).png)          
 
+A custom IP in VLSI design refers to a user-defined intellectual property (IP) block that performs a specific function tailored to the designer's needs. It allows for the reuse of pre-designed, verified logic in multiple projects    
 
+![Image Description](Media/Day%20-%202/Image%20(3).png)            
+
+Decoupling capacitors are used to filter out noise and smooth voltage fluctuations in power supply lines, ensuring stable operation of integrated circuits (ICs). They provide a local charge reservoir to supply current during transient events, reducing power supply ripple.   
+
+![Image Description](Media/Day%20-%202/Image%20(4).png)    
+
+Noise margin refers to the ability of a digital circuit to tolerate noise without causing errors in logic levels. It is the difference between the actual voltage level of a signal and the minimum voltage required for a correct logic interpretation.    
+
+![Image Description](Media/Day%20-%202/Image%20(5).png)    
+![Image Description](Media/Day%20-%202/Image%20(6).png)    
+
+Power planning in VLSI design is the process of managing and optimizing the power consumption of a chip during the design phase. It involves strategies such as power gating, clock gating, and the use of low-power cells to reduce dynamic and static power dissipation. Effective power planning ensures that the chip meets performance requirements while minimizing energy usage and heat generation.   
+
+![Image Description](Media/Day%20-%202/Image%20(7).png)      
+
+Pin placement in VLSI design refers to the process of positioning the input/output (I/O) pins of a chip on its physical layout. Proper pin placement is crucial for minimizing routing congestion, optimizing signal integrity, and reducing the overall area of the chip. It also ensures efficient communication with external devices while meeting electrical and design constraints.    
+
+---
 
 
 
