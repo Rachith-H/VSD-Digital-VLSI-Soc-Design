@@ -96,7 +96,7 @@ The following images display the various folders and their contents present in t
 ![Image Description](Media/DAY%20-%201/3/Image%20(2).png)
 ---
 ---
-### 1.6
+### 1.6 Design Preparation step
 ---
 
 The following images display the source files related to picorv32a    
@@ -105,7 +105,6 @@ The following images display the source files related to picorv32a
 ![Image Description](Media/DAY%20-%201/4/Image%20(2).png)
 ![Image Description](Media/DAY%20-%201/4/Image%20(3).png)  
 
-#### Design preparation step
 Follow the code in openlane directory to start openlane in interactive mode and begin design setup  
 
 `docker`  
@@ -164,6 +163,34 @@ Power planning in VLSI design is the process of managing and optimizing the powe
 Pin placement in VLSI design refers to the process of positioning the input/output (I/O) pins of a chip on its physical layout. Proper pin placement is crucial for minimizing routing congestion, optimizing signal integrity, and reducing the overall area of the chip. It also ensures efficient communication with external devices while meeting electrical and design constraints.    
 
 ---
+### 2.2 Floor step planning in Openlane
+---
+The next step after synthesis is floor plannning which can be done with the following code  
+
+`run_floorplan`    
+
+The following image displays the observations made after this command,    
+
+
+![Image Description](Media/Day%20-%202/Image%20(8).png)      
+
+The following image shows the newly created files after running floor planning,    
+
+![Image Description](Media/Day%20-%202/Image%20(10).png)        
+
+The following image shows details of DIE Area,    
+ 
+![Image Description](Media/Day%20-%202/Image%20(9).png)        
+
+The following line of code opens it in MAGIC,      
+
+`magic -T /home/vsduser//Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`    
+
+
+![Image Description](Media/Day%20-%202/Image%20(11).png)    
+
+
+
 
 
 
