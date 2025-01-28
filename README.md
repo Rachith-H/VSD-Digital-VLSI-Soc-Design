@@ -127,6 +127,11 @@ Flipflop ratio = 1613/14876 = **0.10843**  or  **10.843%**
 ---
 ## Day - 2
 ---
+### 2.1 Chip Floor planning considerations
+---  
+**Floorplanning** in VLSI design refers to the process of arranging the functional blocks or modules on a chip. The goal is to optimize the chip’s layout by minimizing area, power consumption, and wirelength while ensuring good performance and manufacturability.  
+![Image Description](Media/DAY%20-%202/Image%20(1).png)    
+Utilization Factor (or Utilization) is a metric that measures the efficiency of the chip area usage. It is calculated as the ratio of the area occupied by the functional modules (core area) to the total available chip area.
 
 
 
