@@ -42,7 +42,47 @@ This process bridges the gap between software code and physical hardware impleme
 ![Image Description](Media/DAY%20-%201/1.3/Image%20(1).png)
 ![Image Description](Media/DAY%20-%201/1.3/Image%20(2).png)
 ---
-### 1.3 
+### 1.3 Introduction to Openlane
+---
+![Image Description](Media/DAY%20-%201/2/Image%20(1).png)
+![Image Description](Media/DAY%20-%201/2/Image%20(2).png)
+- **OpenLane** is an open-source, end-to-end physical design automation (EDA) toolchain for digital ASIC design. It takes an RTL design as input and produces a manufacturable GDSII layout as output. Built on top of open-source tools like Yosys, OpenROAD, and Magic, OpenLane supports the entire flow, including synthesis, floor planning, placement, routing, and sign-off checks. It is widely used for learning and implementing VLSI design concepts, especially in academic and research environments.
+---
+### 1.4 Simplified RTL to GDSII Flow in Openlane
+![Image Description](Media/DAY%20-%201/2/Image3.png)
+![Image Description](Media/DAY%20-%201/2/Image%20(4).png)
+- RTL (Register Transfer Level) : This is the starting point where the design is described in an HDL (e.g., Verilog or VHDL).It defines the logic and behavior of the circuit at a high level.
+- Synthesis:
+Translates the RTL code into a gate-level netlist using standard cells from a given technology library.
+The output is a representation of the circuit in terms of basic gates (AND, OR, etc.) that can be implemented on silicon.
+- FP + PP (Floor Planning and Power Planning)
+Floor Planning: Defines the placement of major blocks in the chip, such as macros and standard cell regions, to optimize area and performance.
+Power Planning: Designs the power distribution network (PDN) to ensure all components receive adequate power and ground connections.
+- Placement :
+Standard cells are placed in specific locations on the die based on the floor plan.
+Ensures proper placement for routing and performance optimization while minimizing delays.
+- CTS (Clock Tree Synthesis) :
+Builds the clock distribution network to ensure the clock signal reaches all parts of the chip with minimal skew (delay differences).
+Critical for synchronizing operations across the chip.
+- Routing :
+Connects the placed cells and macros with wires to establish signal paths as defined in the netlist.
+Focuses on minimizing wire length, avoiding congestion, and meeting timing constraints.
+- Sign-Off :
+Final verification stage before tape-out.
+Includes checks for timing (STA), power, signal integrity, and physical design rules.
+Ensures the design is ready for fabrication.
+- PDK (Process Design Kit) :
+A set of files provided by the foundry that contains technology-specific information (e.g., design rules, standard cells) required for implementing the design.
+- GDSII :
+The final output of the flow, representing the chip's physical layout in a format used for fabrication.
+Contains all layers and features of the design for manufacturing.
+
+
+
+
+
+
+
 
 
 
