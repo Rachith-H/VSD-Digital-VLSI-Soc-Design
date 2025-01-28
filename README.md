@@ -39,8 +39,10 @@ Additionally, an essential interface between the RISC-V architecture and the har
 This process bridges the gap between software code and physical hardware implementation, enabling seamless execution of programs on custom hardware designs.  
 
 ![Image Description](Media/DAY%20-%201/1.2/Image.png)
+![Image Description](Media/DAY%20-%201/1.3/Image%20(1).png)
+![Image Description](Media/DAY%20-%201/1.3/Image%20(2).png)
 ---
-
+### 1.1.3 
 
 
 
