@@ -163,7 +163,7 @@ Power planning in VLSI design is the process of managing and optimizing the powe
 Pin placement in VLSI design refers to the process of positioning the input/output (I/O) pins of a chip on its physical layout. Proper pin placement is crucial for minimizing routing congestion, optimizing signal integrity, and reducing the overall area of the chip. It also ensures efficient communication with external devices while meeting electrical and design constraints.    
 
 ---
-### 2.2 Floor step planning in Openlane
+### 2.2 Floor planning in Openlane
 ---
 The next step after synthesis is floor plannning which can be done with the following code  
 
@@ -191,7 +191,43 @@ The following line of code opens it in MAGIC,
 ---
 ---
 ### 2.3 Library binding and Placement
+---  
+
+The binding process in physical design, where the logical netlist is mapped to physical cells from the standard cell library.This step is crucial before placement and routing in the backend flow.  
+
+![Image Description](Media/Day%20-%202/Image%20(12).png)   
+
+Placement is the process of determining the optimal physical locations of standard cells on the chip while minimizing timing delays, power consumption, and area. It ensures that cells are placed without overlap and maintains logical connectivity from the netlist. Placement serves as the foundation for the routing phase in the physical design flow.  
+
+![Image Description](Media/Day%20-%202/Image%20(13).png)  
+![Image Description](Media/Day%20-%202/Image%20(14).png)   
+
+The following image illustrates the VLSI physical design flow, covering logic synthesis, floorplanning, placement, and routing. It highlights how a netlist is transformed into a physical layout, optimizing timing, power, and noise. Key stages include organizing blocks (floorplanning), placing cells (placement),clock tree synthesis(cts) and connecting them (routing).  
+![Image Description](Media/Day%20-%202/Image%20(15).png)        
+
 ---
+### 2.4 Placement in Openlane  
+---  
+
+Execute the following code to perform placement procedure in openlane,
+`run_placement`      
+
+![Image Description](Media/Day%20-%202/Image(17).png)     
+
+Execute the following code to view it in magic,  
+`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`    
+
+![Image Description](Media/Day%20-%202/Image(16).png)     
+
+
+
+
+
+
+
+
+
+
 
 
 
