@@ -219,6 +219,21 @@ Execute the following code to view it in magic,
 
 ![Image Description](Media/Day%20-%202/Image(16).png)     
 
+---
+### 2.5 Cell design and Timimg parameters  
+---  
+The cell design flow begins with defining the cell's functionality, size, and performance specifications. Next, the circuit design is created at the transistor level, followed by generating the physical layout while optimizing for area and ensuring DRC compliance. Parasitic extraction is performed to model resistance and capacitance accurately, and SPICE simulations verify the cell's performance under varying process, voltage, and temperature (PVT) conditions. This ensures the cell meets all timing, power, and area requirements before inclusion in the standard cell library.  
+
+![Image Description](Media/Day%20-%202/Image%20(18).png)   
+![Image Description](Media/Day%20-%202/Image%20(19).png)       
+
+Timing characterization involves determining the timing behavior of a standard cell, which includes analyzing how quickly signals propagate through the cell and how it responds to input changes. Key parameters include setup time, hold time, propagation delay, and transition time. These values are extracted from simulations under different voltage, temperature, and process conditions to ensure the cell meets performance targets.  
+![Image Description](Media/Day%20-%202/Image%20(21).png)     
+![Image Description](Media/Day%20-%202/Image%20(22).png)       
+
+---
+
+
 
 
 
