@@ -232,6 +232,114 @@ Timing characterization involves determining the timing behavior of a standard c
 ![Image Description](Media/Day%20-%202/Image%20(22).png)       
 
 ---
+## Day - 3 
+---
+### 3.1 CMOS inverter in SPICE
+---  
+A SPICE deck is a text file that describes a CMOS circuit for simulation. It includes details like circuit components, their connections, and simulation commands. The file defines transistors, power supply, inputs, and outputs, along with instructions for analyzing the circuit's behavior. It helps in testing how the circuit responds to different conditions, such as voltage changes, timing delays, and power consumption, before actual fabrication.    
+
+![Image Description](Media/Day%20-%203/Photo%20(2).png)        
+
+![Image Description](Media/Day%20-%203/Photo%20(3).png)        
+
+The 16-mask CMOS process is a standard fabrication method that uses 16 photolithography masks to define different layers and structures in an integrated circuit. It includes steps like well formation (n-well and p-well for transistors), field oxidation (for isolation), gate oxide and polysilicon formation (for transistor gates), source/drain doping (for transistor operation), contact and metal layer formation (for interconnections), and passivation (for protection). This process ensures precise transistor fabrication, isolation, and connectivity, making it suitable for high-performance CMOS circuits.  
+
+![Image Description](Media/Day%20-%203/Photo%20(4).png)    
+![Image Description](Media/Day%20-%203/Photo%20(5).png)        
+
+
+
+---
+### 3.2 CMOS Inverter using magic layout and ngspice   
+---  
+The required files of cmos inverter can be found in the github repository cloned with the following command,  
+`git clone https://github.com/nickson-jose/vsdstdcelldesign.git`  
+The contents of this are as follows,    
+
+![Image Description](Media/Day%20-%203/Image%20(1).png)        
+
+The sky130A.tech file is copied to this new folder with the following command,      
+`cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign`    
+
+The layout of the inverter is opened in magic with the following command,  
+`magic -T sky130A.tech sky130_inv.mag &`    
+
+![Image Description](Media/Day%20-%203/Image%20(2).png)    
+
+The nmos and pmos are identified with `what` command in tkcon window,    
+
+![Image Description](Media/Day%20-%203/Image%20(3).png)
+![Image Description](Media/Day%20-%203/Image%20(4).png)
+
+
+This layout is extracted as a spice file with the following command in tkcon window,  
+```
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
+![Image Description](Media/Day%20-%203/Image%20(5).png)
+
+The extracted spice file is as follows,    
+
+![Image Description](Media/Day%20-%203/Image%20(6).png)  
+
+The following changes are made in this spice file, in order the execute and observe the waveforms using ngspice,    
+
+![Image Description](Media/Day%20-%203/Image%20(7).png)
+
+The ngspice plots are obtained using th efollowing commands,  
+`ngspice sky130_inv.spice`  
+`plot y vs time a`  
+  
+![Image Description](Media/Day%20-%203/Image%20(8).png)     
+
+The following image shows the ngspice waveform for the cmos inverter by which various parameters like rise time and fall time can be determined,  
+
+![Image Description](Media/Day%20-%203/Image%20(9).png)
+![Image Description](Media/Day%20-%203/Image%20(10).png)
+
+To perform DRC for the layout, the required test files can be downloaded with the following command,  
+```
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+tar xfz drc_tests.tgz
+cd drc_tests
+ls -ltr
+```
+
+![Image Description](Media/Day%20-%203/Image%20(11).png)   
+
+The following image shows the .magicrc file now available in drc_tests folder, it can be viewed withe following command,  
+`vi .magicrc`    
+
+![Image Description](Media/Day%20-%203/Image%20(12).png)    
+
+Now, open Magic tool using the command `magic -d XR &`  
+and open the metal3 file,        
+The pheriphery rule of metal 3 are available at  
+`https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3`
+
+![Image Description](Media/Day%20-%203/Image%20(13).png)        
+
+Design rule check can be performed with the following commands in tkcon window,    
+`drc why` , for checking the violations  
+`load poly ` , to see the errors    
+
+![Image Description](Media/Day%20-%203/Image%20(14).png)          
+
+After the necessary changes the final layout with no drc errors is as shown below,    
+
+![Image Description](Media/Day%20-%203/Image%20(15).png)   
+![Image Description](Media/Day%20-%203/Image%20(16).png)     
+---
+
+
+
+
+
+
+
 
 
 
