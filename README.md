@@ -333,6 +333,66 @@ After the necessary changes the final layout with no drc errors is as shown belo
 ![Image Description](Media/Day%20-%203/Image%20(15).png)   
 ![Image Description](Media/Day%20-%203/Image%20(16).png)     
 ---
+## Day - 4
+---  
+### 4.1
+---
+The tracks info can be checked with `less tracks.info` command,  
+
+![Image Description](Media/Day%20-%204/Image%20(1).png)   
+
+Now open the inverter in Magic tool, and set up the grid with the following command in tkcon window,  
+`help grid`  
+
+`grid 0.46um 0.34um 0.23um 0.17um`  
+
+![Image Description](Media/Day%20-%204/Image%20(2).png)     
+
+Save this as a new lef file with the `save` command,  
+
+![Image Description](Media/Day%20-%204/Image%20(3).png)     
+
+Now open this file and enter `lef write` in tkcon window,    
+
+![Image Description](Media/Day%20-%204/Image%20(4).png)       
+
+The lef file is as shown below,    
+
+![Image Description](Media/Day%20-%204/Image%20(5).png)     
+
+Now copy the lef file and library file to 'src' folder under 'picorv32a'  
+The image below shows the pasted files in the required location,    
+
+![Image Description](Media/Day%20-%204/Image%20(6).png)     
+![Image Description](Media/Day%20-%204/Image%20(7).png)      
+
+Now modify the existing config.tcl file as shown below,  
+```
+ set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+ set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+ set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+ set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+![Image Description](Media/Day%20-%204/Image%20(8).png)      
+
+After this, run begin the openlane flow from design preparation step, followed by synthesis, floorplan and placement,
+The following images shows the openlane flow,   
+
+![Image Description](Media/Day%20-%204/Image%20(9).png)      
+![Image Description](Media/Day%20-%204/Image%20(10).png)      
+![Image Description](Media/Day%20-%204/Image%20(11).png)    
+
+Further load the generated file in magic tools with th efollowing command,  
+`cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/02-01_11-58/results/placement/`  
+
+`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`    
+
+![Image Description](Media/Day%20-%204/Image%20(13).png)    
+![Image Description](Media/Day%20-%204/Image%20(14).png)    
+
+
+
 
 
 
