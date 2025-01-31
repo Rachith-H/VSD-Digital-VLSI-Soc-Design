@@ -389,7 +389,28 @@ Further load the generated file in magic tools with th efollowing command,
 `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`    
 
 ![Image Description](Media/Day%20-%204/Image%20(13).png)    
-![Image Description](Media/Day%20-%204/Image%20(14).png)    
+![Image Description](Media/Day%20-%204/Image%20(14).png)      
+---  
+## Day - 5
+---
+### Routing 
+---
+Maze routing is a pathfinding algorithm used in VLSI physical design to find a viable route between circuit components while avoiding obstacles. Lee’s algorithm, a popular maze routing method, is a breadth-first search (BFS)-based approach that ensures an optimal path if one exists. It works by expanding a wavefront from the source node, marking grid points with increasing step counts until it reaches the destination, then backtraces the shortest path. While effective, Lee’s algorithm is computationally expensive and can be slow for large grids, making it suitable mainly for small-scale routing problems.
+
+![Image Description](Media/Day%20-%205/Image%20(1).png)    
+
+TritonRoute is an open-source detailed router used in VLSI physical design as part of OpenROAD. It performs detailed routing, meaning it finalizes the wire connections at a granular level while adhering to design rules (DRC) and manufacturing constraints. TritonRoute is based on a grid-based routing approach and uses integer linear programming (ILP) and rip-up and reroute techniques to resolve design rule violations. It is widely used in academic and industry research for physical design automation (PDA) and is optimized for modern process nodes.    
+
+![Image Description](Media/Day%20-%205/Image%20(2).png)      
+![Image Description](Media/Day%20-%205/Image%20(3).png)    
+---
+---
+## Acknowledgements  
+- [Kunal P Ghosh](https://github.com/kunalg123) : Director and co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
+- [Nickson Jose](https://github.com/nickson-jose) : Technical Lead @HCLTech  , Ex-Intel
+- [R. Timothy Edwards](https://github.com/RTimothyEdwards) : Senior Vice President of Analog and Design at efabless corporation
+---
+
 
 
 
