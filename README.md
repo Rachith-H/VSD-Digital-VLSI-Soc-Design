@@ -383,7 +383,7 @@ The following images shows the openlane flow,
 ![Image Description](Media/Day%20-%204/Image%20(10).png)      
 ![Image Description](Media/Day%20-%204/Image%20(11).png)    
 
-Further load the generated file in magic tools with th efollowing command,  
+Further load the generated file in magic tools with the following command,  
 `cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/02-01_11-58/results/placement/`  
 
 `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`    
@@ -410,78 +410,5 @@ TritonRoute is an open-source detailed router used in VLSI physical design as pa
 - [Nickson Jose](https://github.com/nickson-jose) : Technical Lead @HCLTech  , Ex-Intel
 - [R. Timothy Edwards](https://github.com/RTimothyEdwards) : Senior Vice President of Analog and Design at efabless corporation
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
